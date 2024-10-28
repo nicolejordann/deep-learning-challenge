@@ -1,6 +1,6 @@
 # deep-learning-challenge
-Data
-##Target Variable:
+
+## Target Variable:
 
 IS_SUCCESSFUL: This indicates whether an organization was successful (1) or not (0).
 
