@@ -1,40 +1,44 @@
 # deep-learning-challenge
-Write an analysis that includes a title and multiple sections, labeled with headers and subheaders (4 points)
+Data
+Target Variable:
 
-Format images in the report so that they display correction (2)
+IS_SUCCESSFUL: This indicates whether an organization was successful (1) or not (0).
 
-Explain the purpose of the analysis (4)
+Feature Variables:
 
-Answer all 6 questions in the results section (10)
+APPLICATION_TYPE, AFFILIATION, CLASSIFICATION, INCOME_AMT, ASK_AMT, and other variables relevant to the organization.
 
-Summarize the overall results of your model (4)
+Removed Columns:
 
-Describe how you could use a different model to solve the same problem, and explain why you would use that model (6)
+EIN and NAME were not included in the training because they did were not meaningful data and would likely skew the model.
 
+Model Architecture
+The first model was built using TensorFlow and Keras libraries. It includes:
 
+Input Layer: Based on the number of input features.
+Hidden Layers:
+First hidden layer: 100 neurons, ReLU activation.
+Second hidden layer: 50 neurons, ReLU activation.
+Output Layer: 1 neuron with sigmoid activation for binary classification (output 0 or 1).
+This gave me 9,501 Total parameters.
+Model Training and Performance
+The model was trained for 100 epochs.
+Overall Accuracy on Training Data was 72.6% but reached 74.6% in the middle epochs.
 
-
-
-Data Preprocessing
-
-What variable(s) are the target(s) for your model?
-IS_SUCCESSFUL Column.
-
-
-What variable(s) are the features for your model?
-AFFILIATION, APPLICATION_TYPE, ASK_AMT, CLASSIFICATION, INCOME_AMT, ORGANIZATION, STATUS, SPECIAL_CONSIDERATIONS.
-
-
-What variable(s) should be removed from the input data because they are neither targets nor features?
-NAME and EIN are not needing in this model.
-
-
-Compiling, Training, and Evaluating the Model
-
-How many neurons, layers, and activation functions did you select for your neural network model, and why?
-
-Were you able to achieve the target model performance?
-
-What steps did you take in your attempts to increase model performance?
-
-Summary: Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and then explain your recommendation.
+Implementated Optimization
+Removed Columns:
+EIN was dropped as they are non-beneficial for the model's predictions and serve only as identifiers.
+Used NAME to create bins
+Model Architecture
+The model was built using the TensorFlow and Keras libraries. It includes:
+The classification count remained at 1500<
+The application count was increased to 1500<
+Input Layer: Based on the number of input features.
+Hidden Layers:
+First hidden layer: 500 neurons, ReLU activation.
+Second hidden layer: 250 neurons, ReLU activation.
+Output Layer: 1 neuron with sigmoid activation for binary classification (output 0 or 1).
+This gave me 144,501 Total parameters
+Model Training and Performance
+The model was trained for 100 epochs
+Overall Accuracy on Training Data was 72% but reached 73.5% in the later epochs.
